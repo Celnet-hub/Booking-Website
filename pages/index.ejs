@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Book A Rider</title>
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+		<link rel="stylesheet" href="media_queries.css" type="text/css" >
+		<!-- <link rel="stylesheet" href="bootstrap.min.css" type="text/css" > -->
+		<link rel="stylesheet" href="style.css" type="text/css" />
+	</head>
+
+
+
+	<body>
+		<header class="background_effect ">
+	
+			<!-- <div class="video_container">
+				<video muted  loop>
+					<source src="../assets/video.mp4" type="video/mp4" />
+				</video>
+			</div> -->
+			
+			<div 
+			<!-- Nav Bar -->
+			<nav id="nav_bar">
+				<div class="nav_center">
+					<div class="nav_logo">
+						<!-- image logo -->
+						<img src="" alt="Page_logo" class="logo" />
+					</div>
+					<div class="links_container">
+						<ul class="nav_links">
+							<li>
+								<a href="/<%= userID %>" class="scroll_link">User Profile</a>
+							</li>
+							<li>
+								<a href="/users/logout" class="btn btn-secondary">Logout</a>
+							</li>
+						</ul>
+					</div>
+					
+				</div>
+			</nav>
+			<section class="main_section">
+				<div class="main_section_wrapper main_center">
+					<!-- About us section -->
+					<div id="info_about_us">
+						<p class="lead mb-3">Welcome <%= username %></p>
+					</div>
+					<!-- Form Section -->
+					<div id="form_section">
+						<h1 class="header_style">Book A Delivery</h1>
+						<form action="" method="POST">
+							<div class="row">
+								<div class="form_group">
+									<label class="label" for="">Name</label>
+								
+									<input
+										class="input_field"
+										type="text"
+										name="username"
+										placeholder="Enter your name"
+										required
+									/>
+								</div>
+								<div class="form_group">
+									<label class="label" for="">Email</label>
+								
+									<input
+										class="input_field"
+										type="text"
+										name="email"
+										placeholder="Enter your phone email"
+									/>
+								</div>
+							</div>
+							<div class="form_group">
+								<label class="label" for="">Phone Number</label>
+							
+								<input
+									class="input_field"
+									type="tel"
+									name="p_number"
+									placeholder="Enter your phone number"
+									required
+								/>
+							</div>
+
+							<div class="form_group">
+								<label class="label" for="">Pickup location</label> <br />
+								<input
+									class="input_field"
+									type="text"
+									name="username"
+									placeholder=""
+									required
+								/>
+							</div>
+							<div class="form_group">
+								<label class="label" for="">Destination</label> <br />
+								<input
+									class="input_field"
+									type="text"
+									name="username"
+									placeholder=""
+									required
+								/>
+							</div>
+
+							<div class="form_group">
+								<label class="label" for="">Pickup Date/Time</label> <br />
+								<input
+									class="input_field"
+									type="datetime-local"
+									name="pickupdate"
+									id="pick_date"
+									value="01-12-2020"
+									min="01-01-2020"
+								/>
+							</div>
+							<div class="form_group">
+								<label class="label" for="text-area"
+									>Additional Information</label
+								>
+							
+								<textarea
+									class="text_area"
+									name="more-desc"
+									id="text-area"
+									cols="30"
+									rows="10"
+									placeholder="Enter More Information about delivery"
+								></textarea>
+							</div>
+
+							<div class="btn">
+								<button class="sub_btn" type="submit">BOOK NOW</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</section>
+		</header>
+		<!-- Contact Section
+		<section class="contact_section">
+			<div id="contact">
+				<h1 class="header_style">contact us</h1>
+			</div>
+		</section> -->
+	</body>
+	<!-- Footer Section -->
+	<footer id="footer">
+		<div class="footer_top">
+					        <div class="container">
+		        	<div class="row">
+		        		<div class="col-md-4 col-lg-4 footer_about">
+		        			<img class="logo_footer" src="" alt="logo-footer" data-at2x="assets/img/logo.png">
+		        			<p>
+		        				We are a young company.
+		        			</p>
+	                    </div>
+		        		<div class="col-md-4 col-lg-4 offset-lg-1 footer_contact">
+		        			<h3>Contact</h3>
+		                	<p><i class="fas fa-map-marker-alt"></i> Via Lagos Nigeria</p>
+		                	<p><i class="fas fa-phone"></i> Phone: (+234) 333 12 68 347</p>
+		                	<p><i class="fas fa-envelope"></i> Email: <a href="mailto:hello@domain.com">hello@domain.com</a></p>
+		                	<!-- <p><i class="fab fa-skype"></i> Skype: you_online</p> -->
+	                    </div>
+	                    <div class="col-md-4 col-lg-3 footer_social">
+							
+	                    	<h3>Follow us</h3>
+	                    	<p>
+	                    		<a href="#"><i class="fab fa-facebook"></i></a> 
+								<a href="#"><i class="fab fa-twitter"></i></a>  
+								<a href="#"><i class="fab fa-instagram"></i></a> 
+	                    	</p>
+	                    </div>
+		            </div>
+		        </div>
+		</div>
+		<div class="footer_bottom">
+	<div class="container">
+	        		<div class="row">
+	           			<div class="col-md-5 footer-copyright">
+	                    	<p>Copyright &copy; <script type="text/javascript">document.write( new Date().getFullYear() );</script>; Designed By DCN</p>
+	                    </div>
+	           	
+	           		</div>
+	        	</div>
+		</div>
+	</footer>
+</html>
