@@ -23,5 +23,9 @@ router.get('/:id/edit', (req,res) => {
 	res.send('Edit User ' + req.user.id);
 })
 
+router.put('/:id/edit', (req,res) => {
+	res.send('user profile has been updated')
+})
+
 //exporting the module.
 module.exports = router;
