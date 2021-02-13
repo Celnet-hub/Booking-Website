@@ -84,11 +84,10 @@ router.post("/register", (req, res) => {
 		});
 	}
 	// TODO Work on clearing the errors array
-	// ! errors.clear(); 
+	// ! errors.clear();
 });
 
 //login Handler
-
 router.post("/login", (req, res, next) => {
 	passport.authenticate("local", {
 		successRedirect: "/dashboard", //redirect to dashboard
@@ -177,11 +176,10 @@ router.post("/forgotpassword", function (req, res, next) {
 
 //reset password
 router.get("/resetpassword/:token", function (req, res) {
-	
 	User.findOne(
 		{
 			resetPasswordToken: req.user.token,
-			resetPasswordExpires: { $gt: Date.now() }
+			resetPasswordExpires: { $gt: Date.now() },
 		},
 		function (err, user) {
 			if (!user || err) {
@@ -194,7 +192,6 @@ router.get("/resetpassword/:token", function (req, res) {
 			res.render("resetpassword", { token: req.user.token });
 		},
 	);
-	
 });
 
 router.post("/resetpassword/:token", function (req, res) {
@@ -266,13 +263,31 @@ router.post("/resetpassword/:token", function (req, res) {
 });
 
 //user profile
-// router.get('/:id', (req,res) => res.render('userProfile', {
-// 	UserName: req.params.name,
-// 	Email: req.params.email,
-// 	Phone: req.params.phone
-// }));
+// ? Unable to retrive user information from the database
+// TODO read on how to render information to the webpage.
+router.get("/userprofile/:id", (req,res) => {
+	let id = req.params.id;
+	User.findById(id, (err,data) => {
+		if (err){
+			throw err;
+		}
+		res.render('userProfile', {
+			UserName: data.name,
+			Email: data.email,
+			Phone: data.phone
+		})
+	})
+});
 
+router.get("/:id/edit", (req, res) => {
+	res.render("updateUserProfile.ejs", {
+		userID: req.user.id,
+	});
+});
 
+router.put("/:id/edit", (req, res) => {
+	res.send("user profile has been updated");
+});
 
 //exporting the module.
 module.exports = router;

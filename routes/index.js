@@ -12,20 +12,7 @@ router.get("/dashboard", ensureAuthorizedUser, (req, res) =>
 	})
 );
 
-//user profile
-router.get('/:id', (req,res) => res.render('userProfile', {
-	UserName: req.user.name,
-	Email: req.user.email,
-	Phone: req.user.phone
-}));
 
-router.get('/:id/edit', (req,res) => {
-	res.send('Edit User ' + req.user.id);
-})
-
-router.put('/:id/edit', (req,res) => {
-	res.send('user profile has been updated')
-})
 
 //exporting the module.
 module.exports = router;

@@ -13,4 +13,6 @@ instead of
 ```nodejs
 "http://" + req.headers.host + "/resetpassword/" + token
 ```
-* TypeError - user.setPassword is not a function:  Userschema.plugin(passportLocalMongoose);
+* TypeError - user.setPassword is not a function:  Userschema.plugin(passportLocalMongoose):
+
+* MongoError: E11000 duplicate key error collection: Cluster0.users index: username_1 dup key: { username: null } : was resolved by droping some indexes in the database. (read more on it) 

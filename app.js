@@ -16,7 +16,7 @@ require("./config/passport.js")(passport);
 //connect to Database
 const dataBase = require("./config/key").MongoURI;
 mongoose
-	.connect(dataBase, { useNewUrlParser: true, useUnifiedTopology: true })
+	.connect(dataBase, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true })
 	.then(() => console.log("MongoDB Atlas Connected...."))
 	.catch((err) => console.log(err));
 
