@@ -40,7 +40,7 @@ app.use(
 );
 
 //methodOverride Middleware
-app.use(methodOverride('_method'));
+app.use(methodOverride('_HttpMethod'));
 // Passport middleware
 app.use(passport.initialize());
 app.use(passport.session());

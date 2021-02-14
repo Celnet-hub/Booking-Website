@@ -281,10 +281,21 @@ router.get("/userprofile/:id", (req,res) => {
 });
 
 router.get("/edit/:id", (req, res) => {
-	res.send("userID: " +  req.params.id);
+	let id = req.params.id;
+	User.findById(id, (err,data) => {
+		if (err){
+			throw err;
+		}
+		res.render('updateUserProfile', {
+			UserName: data.name,
+			Email: data.email,
+			Phone: data.phone,
+			userID: req.params.id
+		});
+	});
 });
 
-router.put("/:id/edit", (req, res) => {
+router.put("/save/:id", (req, res) => {
 	res.send("user profile has been updated");
 });
 
