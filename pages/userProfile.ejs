@@ -17,6 +17,7 @@
             class="form-control"
             placeholder="Enter Name"
             value="<%= UserName %>"
+            readonly
           />
         </div>
         <div class="form-group">
@@ -28,6 +29,7 @@
             class="form-control"
             placeholder="Enter Email"
             value="<%= Email %>"
+            readonly
           />
         </div>
         <div class="form-group">
@@ -39,9 +41,10 @@
             class="form-control"
             placeholder="Enter Phone Number"
             value="<%= Phone %>"
+            readonly
           />
         </div>
-        <a href="#" class="btn btn-primary btn-block">
+        <a href="/users/edit/<%= userID %>" class="btn btn-primary btn-block">
           Update Profile
         </a>
       </form>

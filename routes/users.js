@@ -274,15 +274,14 @@ router.get("/userprofile/:id", (req,res) => {
 		res.render('userProfile', {
 			UserName: data.name,
 			Email: data.email,
-			Phone: data.phone
-		})
-	})
+			Phone: data.phone,
+			userID: req.params.id
+		});
+	});
 });
 
-router.get("/:id/edit", (req, res) => {
-	res.render("updateUserProfile.ejs", {
-		userID: req.user.id,
-	});
+router.get("/edit/:id", (req, res) => {
+	res.send("userID: " +  req.params.id);
 });
 
 router.put("/:id/edit", (req, res) => {
