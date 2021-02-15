@@ -12,4 +12,4 @@ instead of
 ```
 * TypeError - user.setPassword is not a function:  Userschema.plugin(passportLocalMongoose):
 
-* MongoError: E11000 duplicate key error collection: Cluster0.users index: username_1 dup key: { username: null } : was resolved by droping some indexes in the database. (read more on it) 
+* MongoError: E11000 duplicate key error collection: Cluster0.users index: username_1 dup key: { username: null } : was resolved by dropping some indexes in the database. (read more on it) 
