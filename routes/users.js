@@ -295,8 +295,20 @@ router.get("/edit/:id", (req, res) => {
 	});
 });
 
-router.put("/save/:id", (req, res) => {
-	res.send("user profile has been updated");
+router.put("/save/:id", async(req, res) => {
+	let customer;
+	try {
+		customer = await User.findById(req.params.id);
+		customer.name = req.body.name;
+		customer.email = req.body.email;
+		customer.phone = req.body.phone;
+		await customer.save();
+		res.redirect(`/users/userProfile/${req.params.id}`);
+	} catch (error) {
+		if (customer == null) {
+			res.redirect('/users/userProfile');
+		}
+	}
 });
 
 //exporting the module.

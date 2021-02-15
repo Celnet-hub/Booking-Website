@@ -7,7 +7,7 @@
      <!-- Note: files to include must be in the same
     folder with the file to render to the included file -->
       <%- include('partials/messages.ejs') %>
-      <form action="/save/<%= userID %>?_HttpMethod=PUT" method="POST">
+      <form action="/users/save/<%= userID %>?_HttpMethod=PUT" method="POST">
         <div class="form-group>
           <label for="name">Name</label>
           <input
