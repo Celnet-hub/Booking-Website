@@ -303,7 +303,9 @@ router.put("/save/:id", async(req, res) => {
 		customer.email = req.body.email;
 		customer.phone = req.body.phone;
 		await customer.save();
+		req.flash("success_msg", "Your profile has been updated");
 		res.redirect(`/users/userProfile/${req.params.id}`);
+		console.log(req.params.id);
 	} catch (error) {
 		if (customer == null) {
 			res.redirect('/users/userProfile');
