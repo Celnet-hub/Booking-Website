@@ -1,0 +1,12 @@
+header {
+    &_logo{
+
+    }
+
+    &_menu{ //mobile menu
+        //use a direct child selector
+        > span {
+            display: block;
+        }
+    }
+}
