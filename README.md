@@ -13,3 +13,14 @@ instead of
 * TypeError - user.setPassword is not a function:  Userschema.plugin(passportLocalMongoose):
 
 * MongoError: E11000 duplicate key error collection: Cluster0.users index: username_1 dup key: { username: null } : was resolved by dropping some indexes in the database. (read more on it) 
+
+* Refused to apply style from 'http://localhost:4000/pages/src/Styles/style.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled: was resolved by modifying the path for href.
+    instead of:
+
+```http
+    <link rel="stylesheet" href="pages\src\Styles\style.css">
+```
+I used: 
+```http
+<link rel="stylesheet" href="\src\Styles\style.css">
+```
