@@ -1,12 +1,31 @@
-header {
-    &_logo{
+.header {
+	nav {
+		padding: 24px;
+	}
+	&_logo {
+		img {
+			background-color: #087e8b;
+		}
+	}
 
-    }
+	&_menu {
+		//mobile menu
+		//use a direct child selector
+		> span {
+			display: block;
+			width: 26px;
+			height: 2px;
+			background-color: $darkBlue;
 
-    &_menu{ //mobile menu
-        //use a direct child selector
-        > span {
-            display: block;
-        }
-    }
+			&:not(:last-child) {
+				margin-bottom: 3px;
+			}
+		}
+	}
+
+	&_links {
+		a {
+			font-size: $font-small; //14px/16
+		}
+	}
 }

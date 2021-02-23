@@ -3,7 +3,7 @@ const router = express.Router();
 const { ensureAuthorizedUser } = require("../config/authorize");
 
 //create a route to homepage.
-router.get("/", (req, res) => res.render("HomePage.ejs"));
+router.get("/", (req, res) => res.render("HomePage.html"));
 //route to dashboard
 router.get("/dashboard", ensureAuthorizedUser, (req, res) =>
 	res.render("index.ejs", {
