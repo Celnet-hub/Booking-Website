@@ -46,8 +46,20 @@ a, a:visited, a:hover {
           align-items: center;
 }
 
+@media (max-width: 63.9375em) {
+  .hide-for-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 64em) {
+  .hide-for-desktop {
+    display: none;
+  }
+}
+
 .header nav {
-  padding: 24px;
+  padding: 1.0625rem 1.5rem;
 }
 
 .header_logo img {
@@ -59,13 +71,42 @@ a, a:visited, a:hover {
   width: 26px;
   height: 2px;
   background-color: #2d314d;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  -webkit-transform-origin: 3px 1px;
+          transform-origin: 3px 1px;
 }
 
 .header_menu > span:not(:last-child) {
-  margin-bottom: 3px;
+  margin-bottom: 5px;
+}
+
+.header_menu.open > span:first-child {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.header_menu.open > span:nth-child(2) {
+  opacity: 0;
+}
+
+.header_menu.open > span:last-child {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .header_links a {
   font-size: 0.875rem;
+  color: #9698a6;
+  -webkit-transition: color 400ms ease-in-out;
+  transition: color 400ms ease-in-out;
+}
+
+.header_links a:not(:last-child) {
+  margin-right: 32px;
+}
+
+.header_links a:hover {
+  color: #2d314d;
 }
 /*# sourceMappingURL=style.css.map */
