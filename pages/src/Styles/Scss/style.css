@@ -71,8 +71,8 @@ a, a:visited, a:hover {
   width: 26px;
   height: 2px;
   background-color: #2d314d;
-  -webkit-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
+  -webkit-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
   -webkit-transform-origin: 3px 1px;
           transform-origin: 3px 1px;
 }
