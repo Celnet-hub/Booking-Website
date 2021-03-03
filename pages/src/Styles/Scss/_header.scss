@@ -1,30 +1,23 @@
 .header {
-	nav {
-		padding: 1.0625rem 1.5rem;
+	position: relative;
+	z-index: 1;
+
+	.overlay {
+		opacity: 0;
+		position: fixed;
+		top: 0px; //60px
+		right: 0px;	
+		bottom: 0px;
+		left: 0px;
+		background-image: linear-gradient($darkBlue, transparent);
 	}
-	&_logo {
-		img {
-			background-color: #087e8b;
-		}
-	}
-
-	&_menu {
-		//mobile menu
-		//use a direct child selector
-		> span {
-			display: block;
-			width: 26px;
-			height: 2px;
-			background-color: $darkBlue;
-			transition: all 300ms ease-in-out ;
-			transform-origin: 3px 1px;
-
-			&:not(:last-child) {
-				margin-bottom: 5px;
-			}
-		}
-
-		&.open {
+	
+	//Hamburger open styles 
+	&.open {
+		// .overlay{
+		// 	display: block;
+		// }
+		.header_toggle{
 			> span:first-child {
 				transform: rotate(45deg);
 			}
@@ -35,8 +28,58 @@
 				transform: rotate(-45deg);
 			}
 		}
+		
 	}
 
+	nav {
+		position: relative;
+		background-color: $white;
+		padding-top: 1.0625rem;
+		padding-bottom: 1.0625rem;
+	}
+
+	&_logo {
+		img {
+			background-color: #087e8b;
+		}
+	}
+
+	&_toggle {
+		// toggle for mobile menu
+		//use a direct child selector
+		> span {
+			display: block;
+			width: 26px;
+			height: 2px;
+			background-color: $darkBlue;
+			transition: all 350ms ease-in-out ;
+			transform-origin: 3px 1px;
+
+			&:not(:last-child) {
+				margin-bottom: 5px;
+			}
+		}
+
+		
+	}
+
+	&_menu {
+		position: absolute;
+		width: calc(100% - 3rem);
+		left: 50%;
+		transform: translateX(-50%);
+		background: $white;
+		margin-top: 1.5rem; // 24px/16
+		padding: 1.625rem; // 26px/16
+		border-radius: 5px;
+
+		a {
+			display: block;
+			color: $darkBlue;
+			padding: 0.625rem; // 10px/16
+			text-align: center;
+		}
+	}
 
 	&_links {
 		a {
@@ -54,3 +97,4 @@
 		}
 	}
 }
+

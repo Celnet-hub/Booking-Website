@@ -20,6 +20,12 @@ a, a:visited, a:hover {
     color: $grayishBlue;
 }
 
+//spacing 
+.container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
 //flexbox
 .flex {
     display: flex;
