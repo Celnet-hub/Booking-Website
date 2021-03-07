@@ -14,9 +14,6 @@
 	
 	//Hamburger open styles 
 	&.open {
-		// .overlay{
-		// 	display: block;
-		// }
 		.header_toggle{
 			> span:first-child {
 				transform: rotate(45deg);
