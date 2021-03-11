@@ -7,7 +7,6 @@
 		<title>Rider</title>
 		<!-- CSS -->
 		<link rel="stylesheet" href="src\Styles\Scss\style.css" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap"
 			rel="stylesheet"
@@ -15,12 +14,14 @@
 	</head>
 	<body>
 		<header class="header">
-			<nav class="flex flex-jc-sb flex-ai-c">
+			<div class="overlay has-fade"></div>
+
+			<nav class="container container--pall flex flex-jc-sb flex-ai-c">
 				<a href="/" class="header_logo">
 					<img src="" alt="Company Logo" />
 				</a>
 
-				<a href="#" id="HamburgerBtn" class="header_menu hide-for-desktop">
+				<a href="#" id="HamburgerBtn" class="header_toggle hide-for-desktop">
 					<span></span>
 					<span></span>
 					<span></span>
@@ -32,8 +33,27 @@
 					<a href="#">Contact Us</a>
 				</div>
 			</nav>
+			<div class="header_menu has-fade">
+				<a href="">Home</a>
+				<a href="">About us</a>
+				<a href="">Our Services</a>
+				<a href="">Contact us</a>
+			</div>
 		</header>
-
+		<section class="hero">
+			<div class="hero_video"></div>
+			<div class="hero_text">
+				<h1>Next generation Delivery System
+				</h1>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. At rerum pariatur
+		ab repellendus, voluptatibus eius, placeat blanditiis quis praesentium ullam
+		natus consequatur facilis sunt, earum recusandae laudantium doloribus fugiat
+		quia! Lorem ipsum dolor sit amet, consectetur adipisicing elit
+				</p>
+				<a href="#" class="button hero_cta">Get Started</a>
+			</div>
+		</section>
 		<script src="src\Script\script.js"></script>
 	</body>
 </html>
