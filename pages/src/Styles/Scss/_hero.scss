@@ -10,6 +10,7 @@
 
 	&_video {
 		position: relative;
+		//background image for Mobile
 		background-image: url("assets/bg-intro-mobile.svg");
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -40,6 +41,7 @@
 				content: "";
 				position: absolute;
 				height: 100%;
+				//background image for desktop. 
 				background-image: url("assets/bg-intro-desktop.svg");
 				background-repeat: no-repeat;
 				background-position: center bottom;

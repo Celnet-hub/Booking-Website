@@ -16,16 +16,25 @@ body {
 	font-family: "Source Sans Pro", sans-serif;
 	font-size: $font-medium; // 18px/16
 
-    &.noscroll {
-        overflow: hidden;
-    }
+	&.noscroll {
+		overflow: hidden;
+	}
+}
+
+// Text
+h1,
+h2,
+h3 {
+	font-weight: 300;
+	line-height: 1.15;
+	color: $darkBlue;
+	margin-top: 0px;
 }
 
 a,
 a:visited,
 a:hover {
 	text-decoration: none;
-	color: $grayishBlue;
 }
 
 //spacing
