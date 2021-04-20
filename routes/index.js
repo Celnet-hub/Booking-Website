@@ -4,6 +4,11 @@ const { ensureAuthorizedUser } = require("../config/authorize");
 
 //create a route to homepage.
 router.get("/", (req, res) => res.render("HomePage.html"));
+
+//create a route to authorization page
+router.get('/make-request', (req, res) => {
+	res.render('authorize.ejs')
+})
 //route to dashboard
 router.get("/dashboard", ensureAuthorizedUser, (req, res) =>
 	res.render("index.ejs", {
