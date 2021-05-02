@@ -196,11 +196,15 @@ header .logo {
 
 /* section */
 .section {
-	padding-bottom: 5rem;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	text-align: center;
+	text-transform: uppercase;
 }
 
 ***** Footer *****/ .footer-top {
 	padding: 60px 0;
+	padding-top: 50px;
 	background: #333;
 	text-align: left;
 	color: #aaa;
