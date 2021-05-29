@@ -180,11 +180,6 @@ header .logo {
 	}
 }
 
-#about,
-#services {
-	height: 100vh;
-}
-
 /* titles */
 .title h2 {
 	text-align: center;
@@ -203,6 +198,7 @@ header .logo {
 }
 
 ***** Footer *****/ .footer-top {
+	position: absolute;
 	padding: 60px 0;
 	padding-top: 50px;
 	background: #333;
