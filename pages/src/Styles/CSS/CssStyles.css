@@ -10,6 +10,10 @@
 	box-sizing: border-box;
 	font-family: "Poppins", sans-serif;
 }
+html {
+	scroll-behavior: smooth;
+}
+
 header {
 	position: absolute;
 	top: 0;
@@ -23,9 +27,20 @@ header {
 }
 header .logo {
 	color: #fff;
+	margin-bottom: 22px;
 	text-transform: uppercase;
 	cursor: pointer;
 }
+
+
+#our-service {
+	background-color: #fefeff;
+}
+
+#team {
+	padding-bottom: 50px;
+}
+
 .toggle {
 	position: relative;
 	width: 60px;
@@ -33,6 +48,7 @@ header .logo {
 	background: url(https://i.ibb.co/HrfVRcx/menu.png);
 	background-repeat: no-repeat;
 	background-size: 30px;
+	margin-bottom: 22px;
 	background-position: center;
 	cursor: pointer;
 }
@@ -87,6 +103,7 @@ header .logo {
 .text h2 {
 	font-size: 5em;
 	font-weight: 800;
+	margin-top: 52px;
 	color: #fff;
 	line-height: 1em;
 	text-transform: uppercase;
@@ -192,22 +209,26 @@ header .logo {
 /* section */
 .section {
 	padding-top: 2rem;
-	padding-bottom: 2rem;
+	padding-bottom: 5rem;
 	text-align: center;
 	text-transform: uppercase;
 }
 
-***** Footer *****/ .footer-top {
-	position: absolute;
+/* ***** Footer *****/  */
+footer {
+	background-color: #03a9f4;
+}
+.footer-top {
+	position: relative;
 	padding: 60px 0;
 	padding-top: 50px;
-	background: #333;
+	background-color: #444;
 	text-align: left;
 	color: #aaa;
 }
 .footer-top h3 {
 	padding-bottom: 10px;
-	color: #fff;
+	color: rgb(20, 19, 19);
 }
 
 .footer-about img.logo-footer {
@@ -263,6 +284,7 @@ header .logo {
 .footer-bottom {
 	padding: 15px 0;
 	background: #444;
+	border-top-style: double;
 	text-align: left;
 	color: #aaa;
 }
