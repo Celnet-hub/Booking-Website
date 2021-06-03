@@ -62,7 +62,7 @@ body {
 
 /* Thin out the marketing headings */
 .featurette-heading {
-  font-weight: 300;
+  font-weight: 600;
   line-height: 1;
   /* rtl:remove */
   letter-spacing: -.05rem;
@@ -81,7 +81,7 @@ body {
   }
 
   .featurette-heading {
-    font-size: 50px;
+    font-size: 2rem;
   }
 }
 

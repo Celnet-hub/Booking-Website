@@ -33,6 +33,7 @@ header .logo {
 }
 
 
+
 #our-service {
 	background-color: #fefeff;
 }
@@ -224,11 +225,12 @@ footer {
 	padding-top: 50px;
 	background-color: #444;
 	text-align: left;
-	color: #aaa;
+	font-size: large;
+	color: #a7a7a7;
 }
 .footer-top h3 {
 	padding-bottom: 10px;
-	color: rgb(20, 19, 19);
+	color: #aaa;
 }
 
 .footer-about img.logo-footer {
