@@ -36,10 +36,16 @@ header .logo {
 
 #our-service {
 	background-color: #fefeff;
+	background-image: linear-gradient(
+45deg
+, #bcb3b3, white);
 }
 
 #team {
 	padding-bottom: 50px;
+	background-image: linear-gradient(
+		45deg
+		, #958D77, white);
 }
 
 .toggle {
@@ -221,7 +227,7 @@ footer {
 }
 .footer-top {
 	position: relative;
-	padding: 60px 0;
+	padding: 2px 0;
 	padding-top: 50px;
 	background-color: #444;
 	text-align: left;
@@ -240,7 +246,8 @@ footer {
 }
 .footer-about p a {
 	color: #aaa;
-	border-bottom: 1px dashed #666;
+    border-bottom: 5px dashed #666;
+    text-decoration: none;
 }
 .footer-about p a:hover,
 .footer-about p a:focus {
