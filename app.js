@@ -1,10 +1,12 @@
 //imported modules
 const express = require("express");
+const router = express.Router();
 const expressLayout = require("express-ejs-layouts");
 const mongoose = require("mongoose");
+const serverless = require("serverless-http");
 const flash = require("connect-flash");
 const session = require("express-session");
-const methodOverride = require('method-override');
+const methodOverride = require("method-override");
 const passport = require("passport");
 
 //creating express server
@@ -16,7 +18,11 @@ require("./config/passport.js")(passport);
 //connect to Database
 const dataBase = require("./config/key").MongoURI;
 mongoose
-	.connect(dataBase, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true })
+	.connect(dataBase, {
+		useNewUrlParser: true,
+		useUnifiedTopology: true,
+		useCreateIndex: true,
+	})
 	.then(() => console.log("MongoDB Atlas Connected...."))
 	.catch((err) => console.log(err));
 
@@ -40,7 +46,7 @@ app.use(
 );
 
 //methodOverride Middleware
-app.use(methodOverride('_HttpMethod'));
+app.use(methodOverride("_HttpMethod"));
 // Passport middleware
 app.use(passport.initialize());
 app.use(passport.session());
@@ -59,6 +65,10 @@ app.use((req, res, next) => {
 // Routes
 app.use("/", require("./routes/index"));
 app.use("/users", require("./routes/users"));
+app.use("/.netlify/functions/server", router); // path must route to lambda
+
+//config app for serverless http
+module.exports.handler = serverless(app);
 
 //create a port where the application would run on.
 const PORT = process.env.PORT || 4000;

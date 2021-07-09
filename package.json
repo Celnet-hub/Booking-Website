@@ -4,6 +4,7 @@
 	"description": "",
 	"main": "app.js",
 	"scripts": {
+		"build": "netlify-lambda build express",
 		"script": "node app.js",
 		"dev": "nodemon app.js"
 	},
@@ -27,6 +28,8 @@
 		"passport-local-mongoose": "^6.1.0"
 	},
 	"devDependencies": {
-		"nodemon": "^2.0.6"
+		"netlify-lambda": "^2.0.11",
+		"nodemon": "^2.0.6",
+		"serverless-http": "^2.7.0"
 	}
 }
