@@ -3,7 +3,7 @@ const router = express.Router();
 const { ensureAuthorizedUser } = require("../config/authorize");
 
 //create a route to homepage.
-router.get("/", (req, res) => res.render("HomePage.html"));
+router.get("/", (req, res) => res.render("index.html"));
 
 //create a route to authorization page
 router.get('/make-request', (req, res) => {
