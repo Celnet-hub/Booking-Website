@@ -4,16 +4,16 @@
 	"description": "",
 	"main": "app.js",
 	"scripts": {
-		"build": "netlify-lambda build express",
+		"build": "netlify-lambda build ./",
 		"script": "node app.js",
 		"dev": "nodemon app.js"
 	},
 	"author": "DCN",
 	"license": "ISC",
 	"keywords": [
-    "netlify",
-    "express.js"
-  ],
+		"netlify",
+		"express.js"
+	],
 	"dependencies": {
 		"async": "^3.2.0",
 		"bcryptjs": "^2.4.3",
