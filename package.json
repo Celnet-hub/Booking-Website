@@ -4,7 +4,6 @@
 	"description": "",
 	"main": "app.js",
 	"scripts": {
-		"build": "netlify-lambda build ./",
 		"script": "node app.js",
 		"dev": "nodemon app.js"
 	},
