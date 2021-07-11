@@ -3,7 +3,6 @@ const express = require("express");
 const router = express.Router();
 const expressLayout = require("express-ejs-layouts");
 const mongoose = require("mongoose");
-const serverless = require("serverless-http");
 const flash = require("connect-flash");
 const session = require("express-session");
 const methodOverride = require("method-override");
@@ -65,10 +64,10 @@ app.use((req, res, next) => {
 // Routes
 app.use("/", require("./routes/index"));
 app.use("/users", require("./routes/users"));
-app.use("/.netlify/functions/server", router); // path must route to lambda
+// app.use("/.netlify/functions/server", router); // path must route to lambda
 
-//config app for serverless http
-module.exports.handler = serverless(app);
+// //config app for serverless http
+// module.exports.handler = serverless(app);
 
 //create a port where the application would run on.
 const PORT = process.env.PORT || 4000;
