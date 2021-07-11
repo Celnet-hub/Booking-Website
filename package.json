@@ -4,15 +4,17 @@
 	"description": "",
 	"main": "app.js",
 	"scripts": {
-		"script": "node app.js",
+		"start": "node app.js",
 		"dev": "nodemon app.js"
 	},
 	"author": "DCN",
 	"license": "ISC",
 	"keywords": [
-		"netlify",
-		"express.js"
+		"heroku"
 	],
+	"engines": {
+		"node": "14.17"
+	  },
 	"dependencies": {
 		"async": "^3.2.0",
 		"bcryptjs": "^2.4.3",
