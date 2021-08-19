@@ -3,11 +3,12 @@ const express = require("express");
 const router = express.Router();
 const expressLayout = require("express-ejs-layouts");
 const mongoose = require("mongoose");
-const serverless = require("serverless-http");
 const flash = require("connect-flash");
 const session = require("express-session");
 const methodOverride = require("method-override");
 const passport = require("passport");
+require('dotenv').config()
+
 
 //creating express server
 const app = express();
@@ -16,7 +17,9 @@ const app = express();
 require("./config/passport.js")(passport);
 
 //connect to Database
-const dataBase = require("./config/key").MongoURI;
+let password = process.env.PASSWORD
+const dataBase = `mongodb+srv://DCN:${password}@cluster0.0qick.mongodb.net/Cluster0?retryWrites=true&w=majority`;
+// console.log(dataBase);
 mongoose
 	.connect(dataBase, {
 		useNewUrlParser: true,
@@ -37,9 +40,10 @@ app.engine("html", require("ejs").renderFile);
 app.use(express.urlencoded({ extended: false }));
 
 // Express session
+let secret = process.env.KEY 
 app.use(
 	session({
-		secret: "AnyCretS",
+		secret: secret,
 		resave: true,
 		saveUninitialized: true,
 	}),
@@ -65,10 +69,10 @@ app.use((req, res, next) => {
 // Routes
 app.use("/", require("./routes/index"));
 app.use("/users", require("./routes/users"));
-app.use("/.netlify/functions/server", router); // path must route to lambda
+// app.use("/.netlify/functions/server", router); // path must route to lambda
 
-//config app for serverless http
-module.exports.handler = serverless(app);
+// //config app for serverless http
+// module.exports.handler = serverless(app);
 
 //create a port where the application would run on.
 const PORT = process.env.PORT || 4000;
