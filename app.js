@@ -7,8 +7,7 @@ const flash = require("connect-flash");
 const session = require("express-session");
 const methodOverride = require("method-override");
 const passport = require("passport");
-require('dotenv').config()
-
+require("dotenv").config();
 
 //creating express server
 const app = express();
@@ -17,9 +16,9 @@ const app = express();
 require("./config/passport.js")(passport);
 
 //connect to Database
-let password = process.env.PASSWORD
+let password = process.env.PASSWORD;
 const dataBase = `mongodb+srv://DCN:${password}@cluster0.0qick.mongodb.net/Cluster0?retryWrites=true&w=majority`;
-// console.log(dataBase);
+console.log(dataBase);
 mongoose
 	.connect(dataBase, {
 		useNewUrlParser: true,
@@ -40,7 +39,7 @@ app.engine("html", require("ejs").renderFile);
 app.use(express.urlencoded({ extended: false }));
 
 // Express session
-let secret = process.env.KEY 
+let secret = process.env.KEY;
 app.use(
 	session({
 		secret: secret,
