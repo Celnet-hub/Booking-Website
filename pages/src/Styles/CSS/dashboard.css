@@ -1,0 +1,10 @@
+body::before {
+    display: block;
+    content: '';
+    height: 100px;
+}
+
+body {
+	background: #8b5959;
+}
+

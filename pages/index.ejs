@@ -2,47 +2,69 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
 		<title>Book A Rider</title>
 
 		<!-- CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-		<link rel="stylesheet" href="media_queries.css" type="text/css" >
-		<!-- <link rel="stylesheet" href="bootstrap.min.css" type="text/css" > -->
-		<link rel="stylesheet" href="style.css" type="text/css" />
+
+		<!-- Bootstrap CSS -->
+		<link
+			rel="stylesheet"
+			<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+			crossorigin="anonymous"
+		/>
+
+		<!-- Font Awesome -->
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+			integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+			crossorigin="anonymous"
+		/>
+
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="src\Styles\CSS\dashboard.css" />
 	</head>
-
-
-
 	<body>
-		<header class="background_effect ">
-	
+		<header class="background_effect">
 			<!-- <div class="video_container">
 				<video muted  loop>
 					<source src="../assets/video.mp4" type="video/mp4" />
 				</video>
 			</div> -->
-			
-			<div 
+
 			<!-- Nav Bar -->
-			<nav id="nav_bar">
-				<div class="nav_center">
-					<div class="nav_logo">
-						<!-- image logo -->
-						<img src="" alt="Page_logo" class="logo" />
-					</div>
-					<div class="links_container">
-						<ul class="nav_links">
-							<li>
-								<a href="/users/userprofile/<%= userID %>" class="scroll_link">User Profile</a>
+			<nav
+				id=""
+				class="
+					navbar navbar-expand
+					bg-dark
+					navbar-dark
+					py-3
+					fixed-top
+					bg-gradient
+				"
+			>
+				<div class="nav_center container-fluid">
+					<a href="#hero" class="navbar-brand"
+						><h3><span class="text-warning">Delivery Man</span></h3></a
+					>
+					<div class="navbar-collapse collapse">
+						<ul class="navbar-nav ms-auto h6">
+							<li class="nav-item">
+								<a href="/users/userprofile/<%= userID %>" class="nav-link"
+									>User Profile</a
+								>
 							</li>
-							<li>
-								<a href="/users/logout" class="btn btn-secondary">Logout</a>
+							<li class="nav-item">
+								<a href="/users/logout" class="nav-link text-warning">Logout</a>
 							</li>
 						</ul>
 					</div>
-					
 				</div>
 			</nav>
 			<section class="main_section">
@@ -58,7 +80,7 @@
 							<div class="row">
 								<div class="form_group">
 									<label class="label" for="">Name</label>
-								
+
 									<input
 										class="input_field"
 										type="text"
@@ -69,7 +91,7 @@
 								</div>
 								<div class="form_group">
 									<label class="label" for="">Email</label>
-								
+
 									<input
 										class="input_field"
 										type="text"
@@ -80,7 +102,7 @@
 							</div>
 							<div class="form_group">
 								<label class="label" for="">Phone Number</label>
-							
+
 								<input
 									class="input_field"
 									type="tel"
@@ -126,7 +148,7 @@
 								<label class="label" for="text-area"
 									>Additional Information</label
 								>
-							
+
 								<textarea
 									class="text_area"
 									name="Additional Information"
@@ -151,46 +173,66 @@
 				<h1 class="header_style">contact us</h1>
 			</div>
 		</section> -->
+
+		<!-- Footer Section -->
+		<footer id="footer">
+			<div class="footer_top">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-4 col-lg-4 footer_about">
+							<img
+								class="logo_footer"
+								src=""
+								alt="logo-footer"
+								data-at2x="assets/img/logo.png"
+							/>
+							<p>We are a young company.</p>
+						</div>
+						<div class="col-md-4 col-lg-4 offset-lg-1 footer_contact">
+							<h3>Contact</h3>
+							<p><i class="fas fa-map-marker-alt"></i> Via Lagos Nigeria</p>
+							<p><i class="fas fa-phone"></i> Phone: (+234) 333 12 68 347</p>
+							<p>
+								<i class="fas fa-envelope"></i> Email:
+								<a href="mailto:hello@domain.com">hello@domain.com</a>
+							</p>
+							<!-- <p><i class="fab fa-skype"></i> Skype: you_online</p> -->
+						</div>
+						<div class="col-md-4 col-lg-3 footer_social">
+							<h3>Follow us</h3>
+							<p>
+								<a href="#"><i class="fab fa-facebook"></i></a>
+								<a href="#"><i class="fab fa-twitter"></i></a>
+								<a href="#"><i class="fab fa-instagram"></i></a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer_bottom">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-5 footer-copyright">
+							<p>
+								Copyright &copy;
+								<script type="text/javascript">
+									document.write(new Date().getFullYear());
+								</script>
+								; Designed By DCN
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Scripts -->
+
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+			crossorigin="anonymous"
+		></script>
 	</body>
 	<!-- Footer Section -->
-	<footer id="footer">
-		<div class="footer_top">
-					        <div class="container">
-		        	<div class="row">
-		        		<div class="col-md-4 col-lg-4 footer_about">
-		        			<img class="logo_footer" src="" alt="logo-footer" data-at2x="assets/img/logo.png">
-		        			<p>
-		        				We are a young company.
-		        			</p>
-	                    </div>
-		        		<div class="col-md-4 col-lg-4 offset-lg-1 footer_contact">
-		        			<h3>Contact</h3>
-		                	<p><i class="fas fa-map-marker-alt"></i> Via Lagos Nigeria</p>
-		                	<p><i class="fas fa-phone"></i> Phone: (+234) 333 12 68 347</p>
-		                	<p><i class="fas fa-envelope"></i> Email: <a href="mailto:hello@domain.com">hello@domain.com</a></p>
-		                	<!-- <p><i class="fab fa-skype"></i> Skype: you_online</p> -->
-	                    </div>
-	                    <div class="col-md-4 col-lg-3 footer_social">
-							
-	                    	<h3>Follow us</h3>
-	                    	<p>
-	                    		<a href="#"><i class="fab fa-facebook"></i></a> 
-								<a href="#"><i class="fab fa-twitter"></i></a>  
-								<a href="#"><i class="fab fa-instagram"></i></a> 
-	                    	</p>
-	                    </div>
-		            </div>
-		        </div>
-		</div>
-		<div class="footer_bottom">
-	<div class="container">
-	        		<div class="row">
-	           			<div class="col-md-5 footer-copyright">
-	                    	<p>Copyright &copy; <script type="text/javascript">document.write( new Date().getFullYear() );</script>; Designed By DCN</p>
-	                    </div>
-	           	
-	           		</div>
-	        	</div>
-		</div>
-	</footer>
 </html>
