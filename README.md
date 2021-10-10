@@ -32,3 +32,5 @@ I used:
 ```http
 <link rel="stylesheet" href="\src\Styles\style.css">
 ```
+
+* Error: secret option required for sessions :- This was due to no session key in my .env file. A value was assigned to the environment variable to resolve error.
