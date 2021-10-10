@@ -18,7 +18,6 @@ require("./config/passport.js")(passport);
 //connect to Database
 let password = process.env.PASSWORD;
 const dataBase = `mongodb+srv://DCN:${password}@cluster0.0qick.mongodb.net/Cluster0?retryWrites=true&w=majority`;
-console.log(dataBase);
 mongoose
 	.connect(dataBase, {
 		useNewUrlParser: true,
