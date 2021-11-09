@@ -4,7 +4,13 @@ body::before {
     height: 100px;
 }
 
-body {
-	background: #8b5959;
-}
+.display_username {
+    /* display: block;
+    margin-top: -50px;
+    margin-left: -50px; */
+    font-size: 15px;
+    /* font-weight: bold; */
+    color: #fff;
+    width: auto;
 
+}

@@ -44,14 +44,14 @@
 					navbar navbar-expand
 					bg-dark
 					navbar-dark
-					py-3
+					py-1
 					fixed-top
 					bg-gradient
 				"
 			>
 				<div class="nav_center container-fluid">
 					<a href="#hero" class="navbar-brand"
-						><h3><span class="text-warning">Delivery Man</span></h3></a
+						><h3><span class="text-warning mb-0 h4">Delivery Man</span></h3></a
 					>
 					<div class="navbar-collapse collapse">
 						<ul class="navbar-nav ms-auto h6">
@@ -67,12 +67,66 @@
 					</div>
 				</div>
 			</nav>
+
+			<!-- user and total orders made and pending-->
+
+			<section class="p-1 text-center container-fluid">
+				<div id="" class="">
+					<p class="lead mb-4 fw-bold badge bg-secondary text-wrap display_username">Welcome <%= username %></p>
+				</div>
+
+				<div>
+					<div class="row ">
+						<div class="col-md-6">
+							<div class="card">
+								<div class="card-body">
+									<h5 class="card-title"> Orders Made</h5>
+									<p class="card-text">
+										<span class="badge badge-primary">
+											<!--  totalOrders -->
+											20
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="card">
+								<div class="card-body">
+									<h5 class="card-title"> Orders Pending</h5>
+									<p class="card-text">
+										<span class="badge badge-primary">
+											<!--  pendingOrders -->
+											1
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</section>
+
+			<!-- Book and Order history -->
+			<section class="mt-5 mb-5">
+				<div class="container">
+					<div class="row justify-content-md-center">
+						<div class="col">
+							<p>order history</p>
+						</div>
+						<div class="col-6">
+							<p>order form</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+
 			<section class="main_section">
 				<div class="main_section_wrapper main_center">
 					<!-- About us section -->
-					<div id="info_about_us">
-						<p class="lead mb-3">Welcome <%= username %></p>
-					</div>
+					
 					<!-- Form Section -->
 					<div id="form_section">
 						<h1 class="header_style">Book A Delivery</h1>
